@@ -86,21 +86,6 @@ Annonces(soup)
 # In[203]:
 
 
-import pandas as pd 
-import numpy as np
-dataframe=pd.DataFrame(columns=['ID', 'Nom','Titre','Catégorie','Prix','Ville','Téléphone','Date','Heur','Description'])
-my_url = 'https://www.avito.ma/fr/mers_sultan/locations_de_vacances/Studio_de_Prestige_38289212.htm'
-uClient=ur.get(my_url)
-soup=Soup(uClient.text,'lxml')
-dataframe.loc[1] = Annonces(soup)
-dataframe.to_excel(r'Avit.xlsx') 
-my_url = 'https://www.avito.ma/fr/maarif/appareils_photo_cameras/Boitier_sony_fs5_4k_39964935.htm'
-uClient=ur.get(my_url)
-soup=Soup(uClient.text,'lxml')
-dataframe.loc[2] = Annonces(soup)
-dataframe.to_excel(r'Avit.xlsx') 
-
-
 # In[205]:
 
 
